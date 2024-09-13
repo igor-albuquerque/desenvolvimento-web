@@ -1,3 +1,5 @@
+//igor Cavalcante 2300718 e felipe vilaça 2301771
+
 const salario = 0;
 var imposto = 0;
 
