@@ -79,6 +79,7 @@ function buscaPokemon() {
         nome: dados.name,
         hp: hpStat.base_stat,
       };
+      console.log(dadosUteis)
       pokeevo(idevo);
       criaCard(dadosUteis);
     })
