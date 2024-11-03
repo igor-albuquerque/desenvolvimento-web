@@ -6,16 +6,21 @@ function criaCard(dados) {
 
   const foto = document.createElement("img");
   const nome = document.createElement("p");
-  const vida = document.createElement("p");
+  const id1 = document.createElement("p");
+  const vitoria = document.createElement("p");
+  const campeonato = document.createElement("p");
 
   
   foto.src = dados.imageSrc;
   nome.textContent = `Nome: ${dados.nome}`;
-  vida.textContent = `ID: ${dados.id}`;
-
+  id.textContent = `ID: ${dados.id1}`;
+  id.textContent = `ID: ${dados.vitorias}`;
+  id.textContent = `ID: ${dados.campeonatos}`;
   card.appendChild(foto);
   card.appendChild(nome);
-  card.appendChild(vida);
+  card.appendChild(id1);
+  card.appendChild(vitorias);
+  card.appendChild(campeonatos);
 
   container.appendChild(card);
 }
@@ -50,12 +55,12 @@ async function buscapiloto() {
     }
 
     const dados = await resposta.json();
-
+    console.log(dados);
     
     const dadosUteis = {
       imageSrc: dados.response[0]?.image, 
       nome: dados.response[0]?.name,
-      id: dados.response[0]?.id,
+      id1: dados.response[0]?.id,
       vitorias:dados.response[0]?.podiums,
       campeonatos:dados.response[0]?.world_championships
     };
